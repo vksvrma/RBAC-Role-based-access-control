@@ -1,0 +1,156 @@
+/* Style for the form */
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin-top: 20px;
+    margin-left:30px;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin:0 auto; 
+	
+}
+.nav {
+	margin: 20px 0;
+}
+.nav a:hover, a:focus{
+	border-bottom: 2px solid red;
+    padding: 0 0 1.3px;
+}
+.nav .logout {
+color : #FF0000;
+}
+
+
+.nav a {
+	margin-right: 15px;
+	text-decoration: none;
+	color: #8080ff;
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table, th, td {
+	border: 1px solid black;
+}
+th, td {
+	padding: 8px;
+	text-align: left;
+}
+.manage {
+	display: inline;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.manage_table{
+	flex-grow: 1;
+    margin-left: 20px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    overflow-x:auto
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table, th, td {
+    border: 1px solid black;
+	border-radius:5px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:hover {background-color: #FFF8DC;}
+th {
+  background-color: #E0FFFF;
+  color: black;
+}
+
+.create_form{
+	width: 300px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.form {
+    width: 300px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.login_form{
+	width: 300px;
+    margin:100px 450px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+/* Style for the input fields */
+.inp {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.input {
+	width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Style for the submit button */
+.submit {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #8080c0;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.submit:hover {
+    background-color: rgb(255, 128, 128);
+    color:#ffffff;
+}
+
+success{
+	margin:100px auto;
+	color: #8080c0;
+	
+}
