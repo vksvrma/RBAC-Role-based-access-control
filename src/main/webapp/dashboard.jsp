@@ -11,7 +11,6 @@
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     response.setHeader("Pragma", "no-cache");
     response.setDateHeader("Expires", 0);
-
     String username = (String) session.getAttribute("username");
     String fullName = (String) session.getAttribute("fullName");
     String email = (String) session.getAttribute("email");
@@ -42,7 +41,11 @@
     <% if (hasPermission(userPermissions, "new")) { %>
         <a href="?page=newtab">New</a>
     <% } %>
+    <% if (hasPermission(userPermissions, "images")) { %>
+        <a href="?page=images">Images</a>
+    <% } %>
     <a href="?page=logout" class="logout">Logout</a>
+    
 
 </div>
 
@@ -65,7 +68,13 @@
         %>
         <jsp:include page="new_tab_dashboard.jsp" />
         <%
-    } else if (pages.equals("logout")) {
+    } 
+    else if (pages.equals("images") && hasPermission(userPermissions, "images")) {
+        %>
+        <jsp:include page="image_back.jsp" />
+        <%
+    } 
+	 else if (pages.equals("logout")) {
         response.sendRedirect("logout.jsp");
         return;
     } else {

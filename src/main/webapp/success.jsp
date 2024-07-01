@@ -9,7 +9,7 @@
     function redirectAfterDelay() {
         setTimeout(function() {
             window.location.href = 'login.jsp'; 
-        }, 3000);
+        }, 2500);
     }
 </script>
 </head>
