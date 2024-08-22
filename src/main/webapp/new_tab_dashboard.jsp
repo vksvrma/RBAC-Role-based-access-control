@@ -19,7 +19,7 @@
     String sub_section = request.getParameter("sub_section");
     if (sub_section == null || sub_section.equals("create")) {
         %>
-        <jsp:include page="create.jsp" />
+        <jsp:include page="create_user.jsp" />
         <%
     } else if (sub_section.equals("roles")) {
         %>

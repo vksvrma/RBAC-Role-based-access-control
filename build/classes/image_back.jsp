@@ -12,7 +12,7 @@
     <h1>Uploaded Images</h1>
     <div class="image-gallery">
         <%
-        String imagePath = application.getRealPath("/images");
+        String imagePath = application.getRealPath("/images/first");
         File imageDir = new File(imagePath);
         if (imageDir.exists() && imageDir.isDirectory()) {
             File[] listOfFiles = imageDir.listFiles();
@@ -23,7 +23,7 @@
         %>
                         <div class="image-container">
                             <div class="image-item">
-                                <img src="images/<%= fileName %>" alt="<%= fileName %>" class="img">
+                                <img src="images/first<%= fileName %>" alt="<%= fileName %>" class="img">
                             </div>
                             <p class="image-name"><%= fileName %></p>
                         </div>
@@ -31,7 +31,7 @@
                     }
                 }
             } else {
-                out.println("<p>No images found in the directory.</p>");
+                out.println("<p>No images found in the directory</p>");
             }
         } else {
             out.println("<p>Image directory does not exist.</p>");

@@ -20,7 +20,7 @@
     String section = request.getParameter("section");
     if (section == null || section.equals("users")) {
         %>
-        <jsp:include page="users.jsp"/>
+        <jsp:include page="manage_users.jsp"/>
         <% 
     }
     else if(section.equals("roles")){

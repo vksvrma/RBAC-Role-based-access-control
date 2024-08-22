@@ -36,7 +36,8 @@
                 int rowsDeleted = preparedStatement.executeUpdate();
 
                 if (rowsDeleted > 0) {
-                    response.sendRedirect("dashboard.jsp?page=manage&section=users"); // Redirect to manage page
+                    response.sendRedirect("dashboard.jsp?page=manage&section=users"); 
+                    // Redirect to manage page
                 } else {
                     out.println("An error occurred while deleting the user.");
                 }

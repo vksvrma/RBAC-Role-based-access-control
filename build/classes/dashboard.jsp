@@ -30,10 +30,7 @@
     }
 %>
 <div class="dashdiv">
-<h2>Welcome, <%= fullName %>! </h2>
-
-
-    <a href="?page=home">Home</a>
+    <h2>Welcome, <%= fullName %>!</h2>
     <a href="?page=profile">Profile</a>
     <% if (hasPermission(userPermissions, "manage")) { %>
         <a href="?page=manage">Manage</a>
@@ -41,22 +38,16 @@
     <% if (hasPermission(userPermissions, "new")) { %>
         <a href="?page=newtab">New</a>
     <% } %>
-    <% if (hasPermission(userPermissions, "images")) { %>
+     <% if (hasPermission(userPermissions, "images")) { %>
         <a href="?page=images">Images</a>
     <% } %>
     <a href="?page=logout" class="logout">Logout</a>
-    
-
 </div>
 
 <div class="content">
 <%
     String pages = request.getParameter("page");
-    if (pages == null || pages.equals("home")) {
-        %>
-        <jsp:include page="home.jsp" />
-        <%
-    } else if (pages.equals("profile")) {
+    if (pages == null || pages.equals("profile")) {
         %>
         <jsp:include page="profile.jsp" />
         <%
@@ -68,13 +59,11 @@
         %>
         <jsp:include page="new_tab_dashboard.jsp" />
         <%
-    } 
-    else if (pages.equals("images") && hasPermission(userPermissions, "images")) {
+    } else if (pages.equals("images") && hasPermission(userPermissions, "images")) {
         %>
-        <jsp:include page="image_back.jsp" />
+        <jsp:include page="viewDirectory.jsp" />
         <%
-    } 
-	 else if (pages.equals("logout")) {
+    } else if (pages.equals("logout")) {
         response.sendRedirect("logout.jsp");
         return;
     } else {
@@ -83,11 +72,10 @@
         <%
     }
 %>
-
 </div>
+
 <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }

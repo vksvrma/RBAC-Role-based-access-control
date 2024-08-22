@@ -55,7 +55,7 @@ try{
                 <td>
                    <form method ="post" action="permission_delete.jsp">
                    <input type="hidden" name="permission_id" value="<%= rs.getInt("permission_id") %>">
-                   <input type="submit" class ="btn" value="Delete">
+                   <input type="submit" class ="btn" value="Delete" onclick="return confirm('Are you sure want to delete this permission?');">
                    </form>
                 </td>
                 <% } %>	

@@ -9,6 +9,11 @@
 </head>
 <body>
 
+<div class="topnav">
+  <a href="home.jsp" style="margin-left:560px">Home</a>
+  <a class="active"  href="login.jsp">Login</a>
+</div>
+
 <form method = "post" action = "userRoles.jsp" class = "login_form">
 <h3>Login</h3>
 <input type = "text" placeholder = "Username" name = "username" class="inp" required><br>

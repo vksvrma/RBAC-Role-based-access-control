@@ -81,7 +81,7 @@
                     
                     <form method="post" action="roles_delete.jsp" style="display:inline;">
                         <input type="hidden" name="role_id" value="<%= rs.getInt("role_id") %>">
-                        <input type="submit" class ="btn1"  value="Delete">
+                        <input type="submit" class ="btn1"  value="Delete" onclick="return confirm('Are you sure want to delete this role?');">
                     </form>
                 </td>
                 <% } %>
